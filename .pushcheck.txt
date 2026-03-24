@@ -1,0 +1,3 @@
+## main
+?? .pushcheck.txt
+fatal: no upstream configured for branch 'main'
