@@ -834,13 +834,23 @@ function parseTextToHTML(text) {
         .filter(Boolean);
 
     return lines.map((line) => {
-        const urlMatch = line.match(/https?:\/\/\S+/i);
+        const cleaned = line
+            .replace(/<[^>]*>/g, " ")
+            .replace(/\b(target|rel|href)\s*=\s*["'][^"']*["']/gi, " ")
+            .replace(/[<>"']/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        if (!cleaned) return "";
+
+        const urlMatch = line.match(/https?:\/\/[^\s"'<>]+/i) || cleaned.match(/https?:\/\/[^\s"'<>]+/i);
         if (urlMatch) {
             const url = urlMatch[0];
-            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${line}</a>`;
+            const label = cleaned;
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
         }
-        return `<p>${line}</p>`;
-    }).join("");
+        return `<p>${cleaned}</p>`;
+    }).filter(Boolean).join("");
 }
 
 function extractBranchMeta(rawText) {

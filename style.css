@@ -906,6 +906,12 @@ body.lang-ku .arabic-headline {
     transform: scale(1) translateY(0);
 }
 
+.location-modal-panel {
+    background: linear-gradient(170deg, #141419, #0c0c10);
+    box-shadow: 0 28px 68px rgba(0, 0, 0, 0.58);
+    overflow-x: hidden;
+}
+
 .modal-close {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.04);
@@ -1069,6 +1075,9 @@ body.lang-ku .arabic-headline {
     color: var(--text-soft);
     display: grid;
     gap: 12px;
+    overflow-x: hidden;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .location-details hr {
@@ -1121,6 +1130,8 @@ body.lang-ku .arabic-headline {
 .location-details a {
     color: #ff9b9b;
     text-decoration: none;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .location-details a:hover {
