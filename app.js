@@ -906,8 +906,16 @@ async function fetchTextIfExists(path) {
     try {
         const response = await fetch(encodedPath(path));
         if (!response.ok) return null;
+        const contentType = (response.headers.get("content-type") || "").toLowerCase();
         const text = await response.text();
-        return text.trim() ? text : null;
+        const trimmed = text.trim();
+
+        // Some hosts return index.html (status 200) for missing files; ignore HTML fallbacks.
+        if (contentType.includes("text/html") || /^<!doctype html/i.test(trimmed) || /^<html[\s>]/i.test(trimmed)) {
+            return null;
+        }
+
+        return trimmed ? trimmed : null;
     } catch (error) {
         return null;
     }
