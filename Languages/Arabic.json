@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "99GRILL - تجربة فاخرة"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "menus": "القوائم",
+    "favorites": "المفضلة",
+    "locations": "الفروع",
+    "gallery": "المعرض",
+    "order_now": "اطلب الآن"
+  },
+  "hero": {
+    "headline_en": "لما يكون الأكل زاكي… كلشي بكون تمام.",
+    "explore_menu_button": "استعرض القائمة",
+    "order_now_button": "اطلب الآن"
+  },
+  "menus_section": {
+    "eyebrow": "القوائم",
+    "title": "اختر قائمتك",
+    "subtitle": "اختر قائمة الفرع حسب مدينتك",
+    "cards": [
+      {
+        "title": "قائمة العراق",
+        "region": "وسط وجنوب العراق",
+        "note": "الفروع الرئيسية وأشهر الأصناف في جميع المدن."
+      },
+      {
+        "title": "قائمة السليمانية / أربيل",
+        "region": "إقليم كردستان",
+        "note": "مخصصة لفروع السليمانية وأربيل."
+      },
+      {
+        "title": "قائمة دهوك",
+        "region": "المنطقة الشمالية",
+        "note": "تشكيلة خاصة لفرع دهوك."
+      }
+    ]
+  },
+  "favorites_section": {
+    "eyebrow": "المفضلة",
+    "title": "وجبات مميزة",
+    "subtitle": "نظرة أقرب على البرغر، الأجنحة، البطاطا والأطباق اللي الناس ترجع لها",
+    "cards": [
+      {
+        "name": "كريمي تشيكن لودد",
+        "description": "دجاج طري مغطى بصلصة كريمية غنية من تحضيرنا."
+      },
+      {
+        "name": "صحن جريل كومبو",
+        "description": "برغر لذيذ مع بطاطا ذهبية وجوانب متكاملة كوجبة كاملة."
+      },
+      {
+        "name": "أجنحة بوفالو",
+        "description": "أجنحة مقرمشة مغطاة بصلصة بوفالو قوية بطعم غني."
+      }
+    ]
+  },
+  "locations_section": {
+    "eyebrow": "الفروع",
+    "title": "اعثر على 99GRILL الخاص بك",
+    "subtitle": "استكشف المواقع والأجواء والتفاصيل الدقيقة لكل فرع",
+    "branches": [
+      { "name": "الأعظمية", "city": "بغداد" },
+      { "name": "العامرية", "city": "بغداد" },
+      { "name": "الجامعة", "city": "بغداد" },
+      { "name": "البصرة", "city": "البصرة" },
+      { "name": "بنوك", "city": "بغداد" },
+      { "name": "ديالى", "city": "ديالى" },
+      { "name": "دهوك", "city": "دهوك" },
+      { "name": "أربيل", "city": "أربيل" },
+      { "name": "الفلوجة", "city": "الفلوجة" },
+      { "name": "الحلة", "city": "الحلة" },
+      { "name": "كربلاء", "city": "كربلاء" },
+      { "name": "الكرادة", "city": "بغداد" },
+      { "name": "كركوك", "city": "كركوك" },
+      { "name": "الموصل", "city": "الموصل" },
+      { "name": "النجف", "city": "النجف" },
+      { "name": "الناصرية", "city": "الناصرية" },
+      { "name": "الرمادي", "city": "الرمادي" },
+      { "name": "السيدية", "city": "بغداد" },
+      { "name": "السليمانية - سليم", "city": "السليمانية" },
+      { "name": "السليمانية - توی مالك", "city": "السليمانية" },
+      { "name": "تكريت", "city": "تكريت" },
+      { "name": "زيونة", "city": "بغداد" }
+    ]
+  },
+  "gallery_section": {
+    "eyebrow": "السوشيال",
+    "title": "داخل 99GRILL",
+    "subtitle": "الأكل، الناس، اللحظات، والطاقة الحقيقية للبراند",
+    "instagram_label": "إنستغرام",
+    "facebook_label": "فيسبوك",
+    "follow_cta": "تابع 99GRILL على إنستغرام",
+    "media_tile_overlay_label": "عرض"
+  },
+  "final_cta_section": {
+    "title": "جاهز تذوق الحرارة؟",
+    "description": "استعرض القائمة، اعثر على أقرب فرع، وعش تجربة 99GRILL",
+    "explore_menu_button": "استعرض القائمة",
+    "find_location_button": "اعثر على فرع",
+    "order_now_button": "اطلب الآن"
+  },
+  "menu_modal": {
+    "close_aria_label": "إغلاق القائمة",
+    "previous_page_aria_label": "الصفحة السابقة",
+    "next_page_aria_label": "الصفحة التالية",
+    "menu_image_alt": "صفحة القائمة"
+  },
+  "location_modal": {
+    "close_aria_label": "إغلاق تفاصيل الفرع",
+    "branch_title_suffix": "فرع",
+    "loading_branch_details": "جاري تحميل تفاصيل الفرع...",
+    "no_location_images": "لا توجد صور لهذا الفرع.",
+    "details_updating": "يتم تحديث تفاصيل الموقع حالياً، يرجى الاتصال للحصول على الاتجاهات.",
+    "open_in_google_maps": "فتح في خرائط Google",
+    "call_prefix": "اتصال"
+  },
+  "lightbox_modal": {
+    "close_aria_label": "إغلاق الوسائط",
+    "title": "داخل 99GRILL"
+  },
+  "order_modal": {
+    "close_aria_label": "إغلاق الطلب",
+    "title": "للطلب",
+    "subtitle": "اختر رقم لطلبك",
+    "talabat_cta": "اطلب عبر طلبات"
+  },
+  "image_alt_text": {
+    "logo": "شعار 99GRILL",
+    "signature_video_aria_template": "{item_name}",
+    "location_branch_image_template": "فرع {branch_name}",
+    "social_media_image_alt": "سوشيال 99GRILL",
+    "gallery_item_alt": "عنصر من معرض 99GRILL"
+  },
+  "footer": {
+    "rights": "© {year} 99GRILL. جميع الحقوق محفوظة.",
+    "separator": " | ",
+    "credit_label": "الموقع بواسطة LanyGen",
+    "credit_url": "https://lanygen.com/"
+  }
+}

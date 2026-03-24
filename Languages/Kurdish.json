@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "99GRILL - ئەزموونی پڕیمیۆم"
+  },
+  "navigation": {
+    "home": "سەرەتا",
+    "menus": "مێنیوەکان",
+    "favorites": "دڵخوازەکان",
+    "locations": "شوێنەکان",
+    "gallery": "گالەری",
+    "order_now": "داواکردن"
+  },
+  "hero": {
+    "headline_en":" کاتێک خواردنەکە خۆشە… هەستەکانیش خۆشتر دەبن.",
+    "explore_menu_button": "بینینی مێنیو",
+    "order_now_button": "داواکردن"
+  },
+  "menus_section": {
+    "eyebrow": "مێنیوەکان",
+    "title": "مێنیوەکەت هەڵبژێرە",
+    "subtitle": "مێنیوی گونجاو بەپێی شارەکەت هەڵبژێرە",
+    "cards": [
+      {
+        "title": "مێنیوی عێراق",
+        "region": "ناوەڕاست و باشووری عێراق",
+        "note": "فرعە سەرەکیەکان و خواردنە ناسراوەکان."
+      },
+      {
+        "title": "مێنیوی سلێمانی / هەولێر",
+        "region": "هەرێمی کوردستان",
+        "note": "تایبەت بە فرعەکانی سلێمانی و هەولێر."
+      },
+      {
+        "title": "مێنیوی دهۆک",
+        "region": "باشووری باکوور",
+        "note": "تایبەتمەندییە تایبەت بۆ دهۆک."
+      }
+    ]
+  },
+  "favorites_section": {
+    "eyebrow": "دڵخوازەکان",
+    "title": "خواردنە تایبەتەکان",
+    "subtitle": "نزیکتر ببەوە لە بەرگر، بال، فرایز و خواردنە پڕکراوەکان",
+    "cards": [
+      {
+        "name": "کریمی چیکن لۆدد",
+        "description": "گوشتە مریشکی نەرم لەگەڵ سۆسی کریمی تایبەت."
+      },
+      {
+        "name": "کۆمبۆی گریل",
+        "description": "بەرگرێکی لەزیز لەگەڵ فرایزی زێڕین و سایدەکان."
+      },
+      {
+        "name": "بالەکانی بوفالۆ",
+        "description": "بالە قەرمەزیەکان لەگەڵ سۆسی بوفالۆی توند."
+      }
+    ]
+  },
+  "locations_section": {
+    "eyebrow": "فرعەکان",
+    "title": "99GRILL ـەکەت بدۆزەرەوە",
+    "subtitle": "شوێن، ئاتمۆسفێر و وردەکارییەکانی هەر فرعێک ببینە",
+    "branches": [
+      { "name": "ئەعظمیە", "city": "بەغدا" },
+      { "name": "عامریە", "city": "بەغدا" },
+      { "name": "جامعە", "city": "بەغدا" },
+      { "name": "بەصرە", "city": "بەصرە" },
+      { "name": "بنوک", "city": "بەغدا" },
+      { "name": "دیالە", "city": "دیالە" },
+      { "name": "دهۆک", "city": "دهۆک" },
+      { "name": "هەولێر", "city": "هەولێر" },
+      { "name": "فلوجە", "city": "فلوجە" },
+      { "name": "حەلە", "city": "حەلە" },
+      { "name": "کەربەلا", "city": "کەربەلا" },
+      { "name": "کەرادە", "city": "بەغدا" },
+      { "name": "کەرکووک", "city": "کەرکووک" },
+      { "name": "مەوسڵ", "city": "مەوسڵ" },
+      { "name": "نەجەف", "city": "نەجەف" },
+      { "name": "ناسریە", "city": "ناسریە" },
+      { "name": "رامادی", "city": "رامادی" },
+      { "name": "سەیدیە", "city": "بەغدا" },
+      { "name": "سلێمانی - سلیم", "city": "سلێمانی" },
+      { "name": "سلێمانی - توی مالک", "city": "سلێمانی" },
+      { "name": "تکریت", "city": "تکریت" },
+      { "name": "زەیونە", "city": "بەغدا" }
+    ]
+  },
+  "gallery_section": {
+    "eyebrow": "سۆشیال",
+    "title": "ناو 99GRILL",
+    "subtitle": "خواردن، خەڵک، ساتەکان و هەستە ڕاستەقینەکە",
+    "instagram_label": "ئینستاگرام",
+    "facebook_label": "فەیسبووک",
+    "follow_cta": "فۆڵۆی 99GRILL بکە لە ئینستاگرام",
+    "media_tile_overlay_label": "بینین"
+  },
+  "final_cta_section": {
+    "title": "ئامادەیت بۆ تاقیکردنەوەی ؟",
+    "description": "مێنیو ببینە، نزیکترین فرع بدۆزەوە و 99GRILL تاقی بکەوە",
+    "explore_menu_button": "بینینی مێنیو",
+    "find_location_button": "دۆزینەوەی فرع",
+    "order_now_button": "داواکردن"
+  },
+  "menu_modal": {
+    "close_aria_label": "داخستنی مێنیو",
+    "previous_page_aria_label": "پەڕەی پێشوو",
+    "next_page_aria_label": "پەڕەی داهاتوو",
+    "menu_image_alt": "پەڕەی مێنیو"
+  },
+  "location_modal": {
+    "close_aria_label": "داخستنی وردەکاری شوێن",
+    "branch_title_suffix": "فرع",
+    "loading_branch_details": "وردەکارییەکان بار دەکرێن...",
+    "no_location_images": "هیچ وێنەیەک نییە بۆ ئەم فرعە.",
+    "details_updating": "وردەکارییەکان نوێ دەکرێنەوە، تکایە پەیوەندی بکە.",
+    "open_in_google_maps": "کردنەوە لە Google Maps",
+    "call_prefix": "پەیوەندی"
+  },
+  "lightbox_modal": {
+    "close_aria_label": "داخستنی میدیا",
+    "title": "ناو 99GRILL"
+  },
+  "order_modal": {
+    "close_aria_label": "داخستنی داواکاری",
+    "title": "بۆ داواکردن",
+    "subtitle": "ژمارەیەک هەڵبژێرە بۆ داواکردن",
+    "talabat_cta": "داواکردن لە Talabat"
+  },
+  "image_alt_text": {
+    "logo": "لۆگۆی 99GRILL",
+    "signature_video_aria_template": "{item_name}",
+    "location_branch_image_template": "فرعی {branch_name}",
+    "social_media_image_alt": "سۆشیال 99GRILL",
+    "gallery_item_alt": "بابەتی گالەری 99GRILL"
+  },
+  "footer": {
+    "rights": "© {year} 99GRILL. هەموو مافەکان پارێزراون.",
+    "separator": " | ",
+    "credit_label": "سایت لەلایەن LanyGen",
+    "credit_url": "https://lanygen.com/"
+  }
+}
