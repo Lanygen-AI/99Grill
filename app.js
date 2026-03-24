@@ -27,6 +27,9 @@ const lightboxContent = document.getElementById("lightbox-content");
 const languageToggle = document.getElementById("language-toggle");
 const languageMenu = document.getElementById("language-menu");
 const languageLabel = document.getElementById("language-label");
+const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+const mobileNavDrawer = document.getElementById("mobile-nav-drawer");
+const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
 
 const languageConfig = {
     en: { code: "en", file: "Languages/English.json", label: "EN", htmlLang: "en", dir: "ltr" },
@@ -337,14 +340,23 @@ function applyStaticCopy() {
     const logo = document.querySelector(".logo img");
     if (logo) logo.alt = t("image_alt_text.logo", logo.alt);
 
-    const navLinks = document.querySelectorAll("#topbar .desktop-nav > a");
-    if (navLinks.length >= 6) {
+    const navGroups = [
+        document.querySelectorAll("#topbar .desktop-nav > a"),
+        document.querySelectorAll(".mobile-nav-links > a")
+    ];
+
+    navGroups.forEach((navLinks) => {
+        if (navLinks.length < 6) return;
         navLinks[0].textContent = t("navigation.home", navLinks[0].textContent);
         navLinks[1].textContent = t("navigation.menus", navLinks[1].textContent);
         navLinks[2].textContent = t("navigation.favorites", navLinks[2].textContent);
         navLinks[3].textContent = t("navigation.locations", navLinks[3].textContent);
         navLinks[4].textContent = t("navigation.gallery", navLinks[4].textContent);
         navLinks[5].textContent = t("navigation.order_now", navLinks[5].textContent);
+    });
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.setAttribute("aria-label", t("navigation.mobile_menu_aria_label", "Open navigation menu"));
     }
 
     const headline = document.querySelector(".arabic-headline");
@@ -1055,6 +1067,7 @@ function setupNavigation() {
         anchor.addEventListener("click", (event) => {
             if (anchor.classList.contains("js-order-now")) {
                 event.preventDefault();
+                closeMobileMenu();
                 openModal(orderModal);
                 return;
             }
@@ -1063,6 +1076,7 @@ function setupNavigation() {
             const targetEl = document.querySelector(target);
             if (!targetEl) return;
             event.preventDefault();
+            closeMobileMenu();
             targetEl.scrollIntoView({ behavior: scrollBehavior, block: "start" });
         });
     });
@@ -1079,8 +1093,48 @@ function setupNavigation() {
     document.querySelectorAll(".js-order-now").forEach((trigger) => {
         trigger.addEventListener("click", (event) => {
             event.preventDefault();
+            closeMobileMenu();
             openModal(orderModal);
         });
+    });
+}
+
+function closeMobileMenu() {
+    if (!mobileNavDrawer || !mobileMenuToggle || !mobileNavBackdrop) return;
+    document.body.classList.remove("mobile-nav-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+    mobileNavDrawer.setAttribute("aria-hidden", "true");
+    mobileNavBackdrop.setAttribute("aria-hidden", "true");
+}
+
+function openMobileMenu() {
+    if (!mobileNavDrawer || !mobileMenuToggle || !mobileNavBackdrop) return;
+    document.body.classList.add("mobile-nav-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "true");
+    mobileNavDrawer.setAttribute("aria-hidden", "false");
+    mobileNavBackdrop.setAttribute("aria-hidden", "false");
+}
+
+function setupMobileMenu() {
+    if (!mobileMenuToggle || !mobileNavDrawer || !mobileNavBackdrop) return;
+
+    mobileMenuToggle.addEventListener("click", () => {
+        if (document.body.classList.contains("mobile-nav-open")) {
+            closeMobileMenu();
+        } else {
+            closeLanguageMenu();
+            openMobileMenu();
+        }
+    });
+
+    mobileNavBackdrop.addEventListener("click", closeMobileMenu);
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) closeMobileMenu();
+    });
+
+    window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMobileMenu();
     });
 }
 
@@ -1163,6 +1217,7 @@ function initPage() {
     setupNavigation();
     setupModalEvents();
     setupLanguageSwitcher();
+    setupMobileMenu();
     setupScrollReveal();
 }
 

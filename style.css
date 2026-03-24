@@ -115,8 +115,108 @@ main {
     align-items: center;
 }
 
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .language-switcher {
     position: relative;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 105;
+}
+
+.mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(82vw, 340px);
+    height: 100vh;
+    background: rgba(12, 12, 16, 0.98);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 110;
+    padding: 90px 16px 20px;
+}
+
+.mobile-nav-links {
+    display: grid;
+    gap: 10px;
+}
+
+.mobile-nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-height: 46px;
+    border-radius: 12px;
+    padding: 11px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-links .nav-btn {
+    border-radius: 12px;
+}
+
+body.mobile-nav-open .mobile-nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.mobile-nav-open .mobile-nav-drawer {
+    transform: translateX(0);
 }
 
 .language-toggle {
@@ -1153,53 +1253,32 @@ body.lang-ku .arabic-headline {
 
     #topbar .container {
         padding: 0 14px;
-        flex-wrap: wrap;
-        row-gap: 8px;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 
     .logo img {
-        height: 38px;
+        height: 36px;
     }
 
     .desktop-nav {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 8px;
-        padding: 2px 0 2px;
-    }
-
-    .desktop-nav::-webkit-scrollbar {
         display: none;
     }
 
-    .desktop-nav a {
-        font-size: 11.5px;
-        letter-spacing: 0.8px;
-        padding: 10px 12px;
-        min-height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.04);
-    }
-
-    .language-switcher {
+    .topbar-actions {
         margin-left: auto;
+        gap: 8px;
     }
 
     .language-toggle {
         min-height: 42px;
-        padding: 9px 12px;
+        padding: 9px 10px;
         font-size: 11px;
+        min-width: 74px;
     }
 
-    .nav-btn {
-        min-height: 42px;
-        padding: 9px 14px;
+    .mobile-menu-toggle {
+        display: inline-flex;
     }
 
     .actions {
@@ -1376,15 +1455,20 @@ body.lang-ku .arabic-headline {
         padding: 0 10px;
     }
 
-    .desktop-nav {
-        gap: 6px;
-    }
-
-    .desktop-nav a,
-    .nav-btn,
     .language-toggle {
         min-height: 40px;
-        padding: 8px 10px;
+        min-width: 68px;
+        padding: 8px 9px;
         font-size: 11px;
+    }
+
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-nav-drawer {
+        width: min(88vw, 320px);
+        padding-top: 84px;
     }
 }
